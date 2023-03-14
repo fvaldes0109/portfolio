@@ -15,9 +15,9 @@
     --size: 10px;
     width: var(--size);
     height: var(--size);
+    transition: background-color 0.8s ease-in-out;
 }
 
 .alive {
     background-color: hsla(var(--gol-alive));
-    transition: background-color 0.5s ease-in-out;
 }
