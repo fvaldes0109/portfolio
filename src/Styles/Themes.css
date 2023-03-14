@@ -1,0 +1,38 @@
+:root {
+
+    --primary-base: 20;
+
+    /* Light Mode */
+    --bg-light: hsl(0, 0%, 96%);
+    --text-light: hsl(0, 0%, 0%);
+    --primary-1-light: hsl(var(--primary-base), 100%, 90%);
+    --primary-2-light: hsl(var(--primary-base), 46%, 85%);
+    --primary-3-light: hsl(var(--primary-base), 40%, 92%);
+
+    /* Dark Mode */
+    --bg-dark: hsl(245, 17%, 21%);
+    --text-dark: white;
+    --primary-1-dark: hsl(var(--primary-base), 12%, 33%);
+    --primary-2-dark: hsl(var(--primary-base), 5%, 28%);
+    --primary-3-dark: hsl(var(--primary-base), 12%, 50%);
+}
+
+:root[color-scheme="dark"] {
+
+    --bg: var(--bg-dark);
+    --text: var(--text-dark);
+    --primary-1: var(--primary-1-dark);
+    --primary-2: var(--primary-2-dark);
+    --primary-3: var(--primary-3-dark);
+    color-scheme: dark;
+}
+
+:root[color-scheme="light"] {
+
+    --bg: var(--bg-light);
+    --text: var(--text-light);
+    --primary-1: var(--primary-1-light);
+    --primary-2: var(--primary-2-light);
+    --primary-3: var(--primary-3-light);
+    color-scheme: light;
+}

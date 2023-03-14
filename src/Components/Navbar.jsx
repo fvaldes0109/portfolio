@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export default class Navbar extends React.Component {
 
@@ -13,10 +14,8 @@ export default class Navbar extends React.Component {
 					<NavLink className="navlink" to="/contact">Contact</NavLink>
 				</div>
 
-				<div className="theme-switch">
-					<span>Dark Theme</span>
-					<img src="https://img.icons8.com/ios/30/000000/sun--v1.png" alt="sun" />
-				</div>
+        <ThemeSwitcher />
+				
 			</nav>
 		);
 	}
