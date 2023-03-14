@@ -1,20 +1,23 @@
 :root {
 
     --primary-base: 20;
+    --gol-alpha: 0.05;
 
     /* Light Mode */
-    --bg-light: hsl(0, 0%, 96%);
-    --text-light: hsl(0, 0%, 0%);
-    --primary-1-light: hsl(var(--primary-base), 100%, 90%);
-    --primary-2-light: hsl(var(--primary-base), 46%, 85%);
-    --primary-3-light: hsl(var(--primary-base), 40%, 92%);
+    --bg-light: 0, 0%, 96%;
+    --text-light: 0, 0%, 0%;
+    --primary-1-light: var(--primary-base), 100%, 90%;
+    --primary-2-light: var(--primary-base), 46%, 85%;
+    --primary-3-light: var(--primary-base), 40%, 92%;
+    --gol-alive-light: 0, 0%, 0%, var(--gol-alpha);
 
     /* Dark Mode */
-    --bg-dark: hsl(245, 17%, 21%);
-    --text-dark: white;
-    --primary-1-dark: hsl(var(--primary-base), 12%, 33%);
-    --primary-2-dark: hsl(var(--primary-base), 5%, 28%);
-    --primary-3-dark: hsl(var(--primary-base), 12%, 50%);
+    --bg-dark: 245, 17%, 21%;
+    --text-dark: 0, 0%, 100%;
+    --primary-1-dark: var(--primary-base), 12%, 33%;
+    --primary-2-dark: var(--primary-base), 5%, 28%;
+    --primary-3-dark: var(--primary-base), 12%, 50%;
+    --gol-alive-dark: 245, 100%, 100%, var(--gol-alpha);
 }
 
 :root[color-scheme="dark"] {
@@ -24,6 +27,7 @@
     --primary-1: var(--primary-1-dark);
     --primary-2: var(--primary-2-dark);
     --primary-3: var(--primary-3-dark);
+    --gol-alive: var(--gol-alive-dark);
     color-scheme: dark;
 }
 
@@ -34,5 +38,7 @@
     --primary-1: var(--primary-1-light);
     --primary-2: var(--primary-2-light);
     --primary-3: var(--primary-3-light);
+    --gol-grid: var(--gol-grid-light);
+    --gol-alive: var(--gol-alive-light);
     color-scheme: light;
 }

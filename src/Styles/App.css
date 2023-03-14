@@ -2,8 +2,8 @@
 
 body {
     margin: 0;
-    background-color: var(--bg);
-    color: var(--text);
+    background-color: hsl(var(--bg));
+    color: hsl(var(--text));
     transition: background-color 0.2s ease-in-out;
 }
 
@@ -35,20 +35,20 @@ nav .navlink {
     display: flex;
     align-items: center;
     padding: 0 20px;
-    border-right: 1px solid var(--primary-1);
-    color: var(--text);
+    border-right: 1px solid hsl(var(--primary-1));
+    color: hsl(var(--text));
     text-decoration: none;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    color: var(--text);
+    color: hsl(var(--text));
 
     transition: background-color 0.2s ease-in-out, border-right 0.2s ease-in-out;
 }
 
 nav .navlink.active {
-    background-color: var(--primary-2);
+    background-color: hsla(var(--primary-2), 0.7);
 }
 
 nav .navlink:hover {
-    background-color: var(--primary-3);
+    background-color: hsla(var(--primary-3), 0.6);
 }
