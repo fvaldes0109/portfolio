@@ -27,7 +27,7 @@ export default class GameOfLife extends React.Component {
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
         
-        if (Math.random() > 0.5) {
+        if (Math.random() > 0.8) {
           grid[i][j] = true;
         }
       }

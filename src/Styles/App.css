@@ -7,9 +7,8 @@ body {
     margin: 0;
     background-color: hsl(var(--bg));
     color: hsl(var(--text));
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     font-family: 'Manrope', sans-serif;
-    /* text-align: center; */
 }
 
 nav {
@@ -68,7 +67,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
+    margin-top: 13%;
 }
 
 .presentation {
@@ -87,4 +86,54 @@ main {
 .presentation p {
     font-size: 25px;
     max-width: 50%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer .contact-displayer {
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.down-button {
+    border: 2px solid hsl(var(--text));
+    border-radius: 50%;
+    padding: 10px 15px 20px 15px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: scale 0.2s ease-in-out, border 0.2s ease-in-out;
+    animation: jiggle 2s infinite;
+}
+
+.down-button:hover {
+    scale: 1.1 1.1;
+}
+
+.arrow {
+    width: 20px;
+	height: 20px;
+    border-width: 3px 3px 0 0;
+    border-style: solid;
+    border-color: var(--text);
+	transform: rotate(135deg);
+}
+
+/* Add jiggle animation up and down to .down-button */
+@keyframes jiggle {
+    0% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -10px;
+    }
+    100% {
+        translate: 0 0;
+    }
 }
