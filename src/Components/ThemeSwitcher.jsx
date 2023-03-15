@@ -12,10 +12,13 @@ const ThemeSwitcher = () => {
 	const moon_icon = "https://img.icons8.com/ios/50/000000/moon-symbol.png";
 
 	return (
-		<div className="theme-switch" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-			<img src={theme === 'light' ? moon_icon : sun_icon} alt="Theme icon" aria-label="Switch color theme" width="20"/>
-			<span>{`${theme === 'light' ? 'Dark' : 'Light'} Theme`}</span>
-		</div>
+		<>
+			<div className="theme-switch" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+				<img src={theme === 'light' ? moon_icon : sun_icon} alt="Theme icon" aria-label="Switch color theme" width="20"/>
+				<span>{`${theme === 'light' ? 'Dark' : 'Light'} Theme`}</span>
+			</div>
+			<div className='float-break'></div>
+		</>
 	);
 }
 

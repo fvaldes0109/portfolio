@@ -18,7 +18,6 @@ export default class GameOfLife extends React.Component {
   
   componentDidMount() {
     setInterval(() => this.tick(), 2000);
-
   }
 
   createGol() {

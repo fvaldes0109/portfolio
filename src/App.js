@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GameOfLife from './Components/GameOfLife';
 
 import Navbar from './Components/Navbar';
+import ThemeSwitcher from './Components/ThemeSwitcher';
+import Home from './Pages/Home';
 import './Styles/App.css';
 
 function App() {
@@ -11,7 +13,14 @@ function App() {
       <BrowserRouter>
 
         <GameOfLife />
-        <Navbar />
+        <ThemeSwitcher />
+        {/* <Navbar /> */}
+
+        <main>
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
+        </main>
 
       </BrowserRouter>
     </div>

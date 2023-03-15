@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
 @import url('./Themes.css');
 
 body {
@@ -5,6 +8,8 @@ body {
     background-color: hsl(var(--bg));
     color: hsl(var(--text));
     transition: background-color 0.2s ease-in-out;
+    font-family: 'Manrope', sans-serif;
+    /* text-align: center; */
 }
 
 nav {
@@ -14,16 +19,21 @@ nav {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-nav .theme-switch {
-    margin: 15px 20px;
+.theme-switch {
+    float: right;
+    padding: 15px 20px 15px 5px;
     display: flex;
     align-items: center;
     cursor: pointer;
     user-select: none;
 }
 
-nav .theme-switch span {
+.theme-switch span {
     margin-left: 10px;
+}
+
+.float-break {
+    clear: both;
 }
 
 nav .links {
@@ -51,4 +61,30 @@ nav .navlink.active {
 
 nav .navlink:hover {
     background-color: hsla(var(--primary-3), 0.6);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -100px;
+}
+
+.presentation h1 {
+    font-size: 50px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.presentation p {
+    font-size: 25px;
+    max-width: 50%;
 }
