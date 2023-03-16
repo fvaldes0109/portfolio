@@ -25,6 +25,7 @@ function App() {
 
         <footer>
           <Contact />
+          <small className='copyright'>&copy; Copyright 2023 Fernando Valdés García</small>
         </footer>
 
       </BrowserRouter>

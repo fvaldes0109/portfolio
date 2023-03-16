@@ -90,14 +90,54 @@ main {
 
 footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-footer .contact-displayer {
-    margin: 80px;
+.contact-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 50px;
+}
+
+.contact-component .links {
+    height: 200px;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.contact-component .links .link-container {
+    padding: 10px;
+    translate: 0 100px;
+    transition: translate 0.4s ease-in-out;
+    user-select: none;
+}
+
+.contact-component .links .link-container.above {
+    translate: 0 0;
+}
+
+.contact-displayer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 100;
+}
+
+.contact-displayer p {
+    transition: opacity 0.4s ease-in-out;
+}
+
+.invisible {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .down-button {
@@ -122,10 +162,14 @@ footer .contact-displayer {
     border-width: 3px 3px 0 0;
     border-style: solid;
     border-color: var(--text);
-	transform: rotate(135deg);
+    transform: translate(0, 50%) rotate(315deg);
+    transition: transform 0.2s ease-in-out;
 }
 
-/* Add jiggle animation up and down to .down-button */
+.arrow.down {
+    transform: rotate(135deg);
+}
+
 @keyframes jiggle {
     0% {
         translate: 0 0;
@@ -136,4 +180,10 @@ footer .contact-displayer {
     100% {
         translate: 0 0;
     }
+}
+
+.copyright {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
 }
