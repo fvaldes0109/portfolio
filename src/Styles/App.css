@@ -110,13 +110,12 @@ footer {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    transition: opacity 0.4s ease-in-out;
 }
 
 .contact-component .links .link-container {
     padding: 10px;
     translate: 0 100px;
-    transition: translate 0.4s ease-in-out;
+    transition: translate 0.4s ease-in-out, opacity 0.4s ease-in-out;
     user-select: none;
 }
 
