@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import getColor from "../Helpers/getColor";
+
 const ThemeSwitcher = (props) => {
 
 	const [theme, setTheme] = useState('light');
@@ -8,8 +10,8 @@ const ThemeSwitcher = (props) => {
       document.documentElement.setAttribute('color-scheme', theme);
     }, [theme]); 
 
-	const sun_icon = "https://img.icons8.com/ios/50/ffffff/sun--v1.png";
-	const moon_icon = "https://img.icons8.com/ios/50/000000/moon-symbol.png";
+	const sun_icon = `https://img.icons8.com/ios/50/${getColor('--text-' + theme)}/sun--v1.png`;
+	const moon_icon = `https://img.icons8.com/ios/50/${getColor('--text-' + theme)}/moon-symbol.png`;
 	
 	return (
 		<>

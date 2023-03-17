@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import arrow_right from '../Assets/arrow-right.svg'
+import getColor from "../Helpers/getColor";
 
 function NavButton(props) {
 
-	const { position, routes } = props;
+	const { position, routes, theme } = props;
 
 	const location = useLocation();
 	const navigate = useNavigate();
@@ -33,7 +33,9 @@ function NavButton(props) {
 		<div className={`nav-button-area ${position}-button`}>
 			<p><strong>{text}</strong></p>
 			<div className="side-button" onClick={() => navigate(goToRouteText)}>
-				<img src={arrow_right} alt="Arrow Right" width="30" />
+				<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill={`#${getColor('--text-' + theme)}`} clip-rule="evenodd">
+					<path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+				</svg>
 			</div>
 		</div>
 	);

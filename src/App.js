@@ -21,8 +21,8 @@ export default class App extends React.Component {
 
     this.routes = new Map();
     this.routes.set('/', 'Home');
-    this.routes.set('/about', 'About');
-    this.routes.set('/projects', 'Projects');
+    this.routes.set('/about', 'About Me');
+    this.routes.set('/projects', 'My Projects');
   }
   
   changeTheme(theme) {
@@ -46,8 +46,8 @@ export default class App extends React.Component {
             </Routes>
           </main>
 
-          <NavButton routes={this.routes} position="left" />
-          <NavButton routes={this.routes} position="right" />
+          <NavButton routes={this.routes} theme={this.state.theme} position="left" />
+          <NavButton routes={this.routes} theme={this.state.theme} position="right" />
 
           <footer>
             <Contact theme={this.state.theme} />

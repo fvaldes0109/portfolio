@@ -233,7 +233,7 @@ footer {
     animation: left-jiggle 2s infinite;
 }
 
-.left-button img {
+.left-button svg {
     rotate: 180deg;
 }
 
