@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import Contact from './Components/Contact';
 import GameOfLife from './Components/GameOfLife';
 import './Styles/App.css';
+import NavButton from './Components/NavButton';
 
 export default class App extends React.Component {
 
@@ -35,7 +36,10 @@ export default class App extends React.Component {
               <Route path='/' element={<Home />} />
             </Routes>
           </main>
-  
+
+          <NavButton position="left" />
+          <NavButton position="right" />
+
           <footer>
             <Contact theme={this.state.theme} />
             <small className='copyright'>&copy; Copyright 2023 Fernando Valdés García</small>

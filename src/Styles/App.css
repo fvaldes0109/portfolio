@@ -3,7 +3,7 @@
 
 @import url('./Themes.css');
 
-html, body, #root, .App, main {
+html, body, #root, .App {
     height: 100%;
 }
 
@@ -71,10 +71,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 90%;
 }
 
 .home-page {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .presentation {
@@ -157,7 +158,7 @@ footer {
     animation: jiggle 2s infinite;
 }
 
-.down-button:hover {
+.down-button:hover, .side-button:hover {
     scale: 1.1 1.1;
 }
 
@@ -191,4 +192,71 @@ footer {
     position: fixed;
     bottom: 0;
     margin-bottom: 10px;
+}
+
+.nav-button-area {
+    position: fixed;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.nav-button-area.right-button {
+    right: 0;
+}
+
+.nav-button-area.left-button {
+    flex-direction: row-reverse;
+}
+
+.nav-button-area p {
+    margin: 0 20px;
+}
+
+.side-button {
+    border: 2px solid hsl(var(--text));
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: scale 0.2s ease-in-out;
+}
+
+.right-button .side-button {
+    animation: right-jiggle 2s infinite;
+}
+
+.left-button .side-button {
+    animation: left-jiggle 2s infinite;
+}
+
+.left-button img {
+    rotate: 180deg;
+}
+
+@keyframes right-jiggle {
+    0% {
+        translate: 0 0;
+    }
+    50% {
+        translate: -10px 0;
+    }
+    100% {
+        translate: 0 0;
+    }
+}
+
+@keyframes left-jiggle {
+    0% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 10px 0;
+    }
+    100% {
+        translate: 0 0;
+    }
 }
