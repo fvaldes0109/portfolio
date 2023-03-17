@@ -7,6 +7,8 @@ import Contact from './Components/Contact';
 import GameOfLife from './Components/GameOfLife';
 import './Styles/App.css';
 import NavButton from './Components/NavButton';
+import About from './Pages/About';
+import Projects from './Pages/Projects';
 
 export default class App extends React.Component {
 
@@ -16,6 +18,11 @@ export default class App extends React.Component {
     this.state = {
       theme: 'light',
     }
+
+    this.routes = new Map();
+    this.routes.set('/', 'Home');
+    this.routes.set('/about', 'About');
+    this.routes.set('/projects', 'Projects');
   }
   
   changeTheme(theme) {
@@ -34,11 +41,13 @@ export default class App extends React.Component {
           <main>
             <Routes>
               <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/projects' element={<Projects />} />
             </Routes>
           </main>
 
-          <NavButton position="left" />
-          <NavButton position="right" />
+          <NavButton routes={this.routes} position="left" />
+          <NavButton routes={this.routes} position="right" />
 
           <footer>
             <Contact theme={this.state.theme} />

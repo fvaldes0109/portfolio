@@ -222,7 +222,7 @@ footer {
     align-items: center;
     cursor: pointer;
     user-select: none;
-    transition: scale 0.2s ease-in-out;
+    transition: scale 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .right-button .side-button {
