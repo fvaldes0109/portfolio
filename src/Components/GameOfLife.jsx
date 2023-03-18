@@ -1,5 +1,4 @@
 import React from "react";
-import memoizeOne from "memoize-one";
 
 import '../Styles/GameOfLife.css';
 
@@ -8,15 +7,16 @@ class GameOfLife extends React.Component {
   constructor(props) {
     super(props);
 
-    this.height = parseInt(window.innerHeight / 10);
-    this.width = parseInt(window.innerWidth / 10);
+    this.height = parseInt(window.innerHeight / 15);
+    this.width = parseInt(window.innerWidth / 15);
+
+    const [grid, elementGrid] = this.createGol();
 
     this.state = {
 
-      grid: this.createGol(),
+      grid,
+      elementGrid,
     }
-
-    this.memoizedGenerateGrid = memoizeOne(this.generateGrid.bind(this));
   }
   
   componentDidMount() {
@@ -26,45 +26,32 @@ class GameOfLife extends React.Component {
   createGol() {
 
     const grid = Array.from(Array(this.height), () => new Array(this.width).fill(false));
+    const elementGrid = [];
+
 
     for (let i = 0; i < this.height; i++) {
+      const elementRow = [];
       for (let j = 0; j < this.width; j++) {
         
+        let newCell = (<div key={`cell-${i}-${j}`} className='gol-cell' />)
         if (Math.random() > 0.8) {
           grid[i][j] = true;
+          newCell = (<div key={`cell-${i}-${j}`} className='gol-cell alive' />)
         }
+        elementRow.push(newCell);
       }
+      elementGrid.push(<div key={`row-${i}`} className="gol-row">{elementRow}</div>);
     }
 
-    return grid;
-  }
-
-  renderCell(i, j) {
-    return (
-      <div
-        key={`cell-${i}-${j}`}
-        className={`gol-cell${this.state.grid[i][j] ? ' alive' : ''}`}
-      />
-    );
-  }
-
-  generateGrid() {
-    const grid = [];
-
-    for (let i = 0; i < this.height; i++) {
-      const row = [];
-      for (let j = 0; j < this.width; j++) {
-        row.push(this.renderCell(i, j));
-      }
-      grid.push(<div key={`row-${i}`} className="gol-row">{row}</div>);
-    }
-    return grid;
+    return [grid, elementGrid];
   }
 
   tick() {
     const newGrid = Array.from(Array(this.height), () => new Array(this.width).fill(false));
 
     const grid = this.state.grid;
+    const elementGrid = document.querySelector('.gol-grid');
+
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
         
@@ -72,6 +59,9 @@ class GameOfLife extends React.Component {
         
         if (neighbours === 3 || (neighbours === 2 && grid[i][j])) {
           newGrid[i][j] = true;
+        }
+        if (newGrid[i][j] !== grid[i][j]) {
+          elementGrid.children[i].children[j].className = `gol-cell${newGrid[i][j] ? ' alive' : ''}`;
         }
       }
     }
@@ -109,10 +99,10 @@ class GameOfLife extends React.Component {
     
     return (
       <div className="gol-grid">
-        {this.generateGrid()}
+        {this.state.elementGrid}
       </div>
     );
   }
 }
 
-export default React.memo(GameOfLife);
+export default GameOfLife;

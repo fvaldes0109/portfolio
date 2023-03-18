@@ -12,7 +12,7 @@
 }
 
 .gol-cell {
-    --size: 10px;
+    --size: 15px;
     width: var(--size);
     height: var(--size);
     transition: background-color 0.8s ease-in-out;
