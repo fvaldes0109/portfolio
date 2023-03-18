@@ -1,15 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import ThemeSwitcher from './Components/ThemeSwitcher';
-import Home from './Pages/Home';
 import Contact from './Components/Contact';
 import GameOfLife from './Components/GameOfLife';
 import './Styles/App.css';
 import NavButton from './Components/NavButton';
-import About from './Pages/About';
-import Projects from './Pages/Projects';
 
+import AnimatedRoutes from './Components/AnimatedRoutes';
 export default class App extends React.Component {
 
   constructor(props) {
@@ -39,11 +37,7 @@ export default class App extends React.Component {
           <ThemeSwitcher changeTheme={this.changeTheme.bind(this)} />
   
           <main>
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/projects' element={<Projects />} />
-            </Routes>
+            <AnimatedRoutes />
           </main>
 
           <NavButton routes={this.routes} theme={this.state.theme} position="left" />

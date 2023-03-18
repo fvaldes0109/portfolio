@@ -38,6 +38,10 @@ main {
     height: 90%;
 }
 
+.main-component {
+    position: absolute;
+}
+
 .home-page {
     margin-bottom: 5%;
 }
