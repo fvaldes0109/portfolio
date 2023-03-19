@@ -31,7 +31,7 @@ export default class App extends React.Component {
     return (
       <div className="App">
         
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
   
           <GameOfLife />
           <ThemeSwitcher changeTheme={this.changeTheme.bind(this)} />
