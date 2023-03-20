@@ -16,18 +16,23 @@ class GameOfLife extends React.Component {
       width,
       height,
     }
-  }
-  
-  componentDidMount() {
 
-    window.addEventListener('resize', () => {
+    this.resizeTimeout = () => {
       clearTimeout(this.resizeTimer);
       this.resizeTimer = setTimeout(() => {
         this.handleResize();
       }, 250);
-    });
+    }
+  }
+  
+  componentDidMount() {
 
+    window.addEventListener('resize', this.resizeTimeout);
     setInterval(() => this.tick(), 4000);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resizeTimeout);
   }
 
   handleResize() {
