@@ -7,31 +7,46 @@ class GameOfLife extends React.Component {
   constructor(props) {
     super(props);
 
-    this.height = parseInt(window.innerHeight / 15);
-    this.width = parseInt(window.innerWidth / 15);
-
-    const [grid, elementGrid] = this.createGol();
+    const { width, height, grid, elementGrid } = this.createGol();
 
     this.state = {
 
       grid,
       elementGrid,
+      width,
+      height,
     }
   }
   
   componentDidMount() {
+
+    window.addEventListener('resize', () => {
+      clearTimeout(this.resizeTimer);
+      this.resizeTimer = setTimeout(() => {
+        this.handleResize();
+      }, 250);
+    });
+
     setInterval(() => this.tick(), 4000);
+  }
+
+  handleResize() {
+    
+    const { width, height, grid, elementGrid } = this.createGol();
+    this.setState({ width, height, grid, elementGrid });
   }
 
   createGol() {
 
-    const grid = Array.from(Array(this.height), () => new Array(this.width).fill(false));
-    const elementGrid = [];
+    const width = parseInt(window.innerWidth / 15);
+    const height = parseInt(window.innerHeight / 15);
+    const grid = Array.from(Array(height), () => new Array(width).fill(false));
+    const elementGrid = []; 
 
 
-    for (let i = 0; i < this.height; i++) {
+    for (let i = 0; i < height; i++) {
       const elementRow = [];
-      for (let j = 0; j < this.width; j++) {
+      for (let j = 0; j < width; j++) {
         
         let newCell = (<div key={`cell-${i}-${j}`} className='gol-cell' />)
         if (Math.random() > 0.8) {
@@ -43,17 +58,18 @@ class GameOfLife extends React.Component {
       elementGrid.push(<div key={`row-${i}`} className="gol-row">{elementRow}</div>);
     }
 
-    return [grid, elementGrid];
+    return { width, height, grid, elementGrid };
   }
 
   tick() {
-    const newGrid = Array.from(Array(this.height), () => new Array(this.width).fill(false));
 
-    const grid = this.state.grid;
+    const { width, height, grid } = this.state;
+
+    const newGrid = Array.from(Array(height), () => new Array(width).fill(false));
     const elementGrid = document.querySelector('.gol-grid');
 
-    for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
+    for (let i = 0; i < height; i++) {
+      for (let j = 0; j < width; j++) {
         
         const neighbours = this.countNeighbours(i, j);
         
@@ -70,8 +86,8 @@ class GameOfLife extends React.Component {
   }
 
   countNeighbours(i, j) {
-      
-    const grid = this.state.grid;
+    
+    const { width, height, grid } = this.state;
     const dirX = [-1, 0, 1];
     const dirY = [-1, 0, 1];
 
@@ -87,7 +103,7 @@ class GameOfLife extends React.Component {
         const newI = i + dirX[x];
         const newJ = j + dirY[y];
 
-        if (newI < 0 || newI >= this.height || newJ < 0 || newJ >= this.width) continue;
+        if (newI < 0 || newI >= height || newJ < 0 || newJ >= width) continue;
 
         if (grid[newI][newJ]) count++;
       }
