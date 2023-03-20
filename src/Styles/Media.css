@@ -1,0 +1,80 @@
+@media (max-width: 900px) {
+    
+    .nav-button-area {
+        width: 115px;
+        margin: 0;
+    }
+
+    .nav-button-area, .nav-button-area.left-button {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .nav-button-area p {
+        margin: 10px;
+    }
+
+    .presentation {
+        height: 400px;
+        justify-content: start;
+    }
+
+    .presentation h1 {
+        font-size: 40px;
+        margin-bottom: 110px;    
+    }
+    
+    .presentation p {
+        font-size: 20px;
+        max-width: none;
+        width: 70%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 693px) {
+
+    .presentation h1 {
+        margin-bottom: 60px;    
+    }
+
+    .presentation p {
+        font-size: 18px;
+    }
+
+    .nav-button-area {
+        width: 100px;
+    }
+
+    .nav-button-area p, .contact-displayer p {
+        font-size: 14px;
+    }
+
+    .side-button {
+        padding: 5px;
+    }
+
+    .side-button svg {
+        scale: 0.8;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .presentation p {
+        width: 60%;
+    }
+}
+
+@media (max-width: 470px) {
+
+    .presentation h1 {
+        font-size: 30px;
+        margin-bottom: 80px;
+    }
+
+    .presentation p {
+        font-size: 15px;
+        width: 50%;
+    }
+}

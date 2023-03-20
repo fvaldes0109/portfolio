@@ -56,6 +56,7 @@ main {
 .presentation h1 {
     font-size: 50px;
     font-family: 'Outfit', sans-serif;
+    text-align: center;
 }
 
 .presentation p {
@@ -186,7 +187,7 @@ footer {
 }
 
 .nav-button-area p {
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 .side-button {
@@ -214,24 +215,24 @@ footer {
 
 @keyframes right-jiggle {
     0% {
-        translate: 0 0;
+        translate: 5px 0;
     }
     50% {
-        translate: -10px 0;
+        translate: -5px 0;
     }
     100% {
-        translate: 0 0;
+        translate: 5px 0;
     }
 }
 
 @keyframes left-jiggle {
     0% {
-        translate: 0 0;
+        translate: -5px 0;
     }
     50% {
-        translate: 10px 0;
+        translate: 5px 0;
     }
     100% {
-        translate: 0 0;
+        translate: -5px 0;
     }
 }

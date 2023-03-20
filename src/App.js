@@ -4,10 +4,12 @@ import { BrowserRouter } from 'react-router-dom';
 import ThemeSwitcher from './Components/ThemeSwitcher';
 import Contact from './Components/Contact';
 import GameOfLife from './Components/GameOfLife';
-import './Styles/App.css';
 import NavButton from './Components/NavButton';
-
 import AnimatedRoutes from './Components/AnimatedRoutes';
+
+import './Styles/App.css';
+import './Styles/Media.css';
+
 export default class App extends React.Component {
 
   constructor(props) {
