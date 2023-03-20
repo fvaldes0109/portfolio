@@ -91,15 +91,15 @@ footer {
 .link-container {
     height: fit-content;
     margin: 10px;
-    translate: 0 100px;
-    transition: translate 0.4s ease-in-out, opacity 0.4s ease-in-out, scale 0.2s ease-in-out;
+    transform: translate(0, 100px);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, scale 0.2s ease-in-out;
     user-select: none;
     cursor: pointer;
     z-index: 100;
 }
 
 .link-container.above {
-    translate: 0 0;
+    transform: translate(0, 0);
 }
 
 .link-container:hover {
@@ -154,13 +154,13 @@ footer {
 
 @keyframes jiggle {
     0% {
-        translate: 0 0;
+        transform: translate(0, 0);
     }
     50% {
-        translate: 0 -10px;
+        transform: translate(0, -10px);
     }
     100% {
-        translate: 0 0;
+        transform: translate(0, 0);
     }
 }
 
@@ -210,29 +210,29 @@ footer {
 }
 
 .left-button svg {
-    rotate: 180deg;
+    transform: rotate(180deg);
 }
 
 @keyframes right-jiggle {
     0% {
-        translate: 5px 0;
+        transform: translate(5px ,0);
     }
     50% {
-        translate: -5px 0;
+        transform: translate(-5px ,0);
     }
     100% {
-        translate: 5px 0;
+        transform: translate(5px ,0);
     }
 }
 
 @keyframes left-jiggle {
     0% {
-        translate: -5px 0;
+        transform: translate(-5px ,0);
     }
     50% {
-        translate: 5px 0;
+        transform: translate(5px ,0);
     }
     100% {
-        translate: -5px 0;
+        transform: translate(-5px ,0);
     }
 }

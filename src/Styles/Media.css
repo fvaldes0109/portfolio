@@ -54,8 +54,12 @@
         padding: 5px;
     }
 
-    .side-button svg {
-        scale: 0.8;
+    .right-button .side-button svg {
+        transform: scale(0.8);
+    }
+
+    .left-button .side-button svg {
+        transform: scale(0.8) rotate(180deg);
     }
 }
 
