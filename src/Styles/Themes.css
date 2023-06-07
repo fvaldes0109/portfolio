@@ -10,6 +10,8 @@
     --primary-2-light: var(--primary-base), 46%, 85%;
     --primary-3-light: var(--primary-base), 40%, 92%;
     --gol-alive-light: 0, 0%, 0%, var(--gol-alpha);
+    --cv-button-light: var(--primary-base), 100%, 65%;
+    --cv-button-hover-light: var(--primary-base), 100%, 75%;
 
     /* Dark Mode */
     --bg-dark: 245, 17%, 21%;
@@ -18,6 +20,8 @@
     --primary-2-dark: var(--primary-base), 5%, 28%;
     --primary-3-dark: var(--primary-base), 12%, 50%;
     --gol-alive-dark: 245, 100%, 100%, var(--gol-alpha);
+    --cv-button-dark: var(--primary-base), 8%, 50%;
+    --cv-button-hover-dark: var(--primary-base), 8%, 70%;
 }
 
 :root[color-scheme="dark"] {
@@ -28,6 +32,8 @@
     --primary-2: var(--primary-2-dark);
     --primary-3: var(--primary-3-dark);
     --gol-alive: var(--gol-alive-dark);
+    --cv-button: var(--cv-button-dark);
+    --cv-button-hover: var(--cv-button-hover-dark);
     color-scheme: dark;
 }
 
@@ -40,5 +46,7 @@
     --primary-3: var(--primary-3-light);
     --gol-grid: var(--gol-grid-light);
     --gol-alive: var(--gol-alive-light);
+    --cv-button: var(--cv-button-light);
+    --cv-button-hover: var(--cv-button-hover-light);
     color-scheme: light;
 }

@@ -7,6 +7,11 @@ html, body, #root, .App {
     height: 100%;
 }
 
+a {
+    color: hsl(var(--text));
+    text-decoration: none;
+}
+
 body {
     margin: 0;
     background-color: hsl(var(--bg));
@@ -28,6 +33,48 @@ body {
 
 .float-break {
     clear: both;
+}
+
+.cv-outline {
+    border: 1px solid hsl(var(--cv-button));
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    left: 20px;
+    padding: 10px;
+    animation: padding-jiggle 2s infinite;
+}
+
+.cv-button {
+    background-color: hsl(var(--cv-button));
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cv-button:hover {
+    background-color: hsl(var(--cv-button-hover));
+}
+
+.cv-button h1 {
+
+}
+
+@keyframes padding-jiggle {
+    0% {
+        padding: 10px;
+    }
+    50% {
+        padding: 0;
+    }
+    100% {
+        padding: 10px;
+    }
 }
 
 main {

@@ -37,7 +37,13 @@ export default class App extends React.Component {
   
           <GameOfLife />
           <ThemeSwitcher changeTheme={this.changeTheme.bind(this)} />
-  
+
+          <div className='cv-outline'>
+            <a className='cv-button' href='/portfolio/fernando-valdes-CV.pdf' target="_blank" rel="noopener noreferrer">
+              <h1>Watch my CV</h1>
+            </a>
+          </div>
+
           <main>
             <AnimatedRoutes />
           </main>
