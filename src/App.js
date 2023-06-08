@@ -30,6 +30,9 @@ export default class App extends React.Component {
   }
 
   render() {
+
+    const year = new Date().getFullYear();
+
     return (
       <div className="App">
         
@@ -40,7 +43,7 @@ export default class App extends React.Component {
 
           <div className='cv-outline'>
             <a className='cv-button' href='/portfolio/fernando-valdes-CV.pdf' target="_blank" rel="noopener noreferrer">
-              <h1>Watch my CV</h1>
+              <h1>Check my CV</h1>
             </a>
           </div>
 
@@ -53,7 +56,7 @@ export default class App extends React.Component {
 
           <footer>
             <Contact theme={this.state.theme} />
-            <small className='copyright'>&copy; Copyright 2023 Fernando Valdés García</small>
+            <small className='copyright'>{`© Copyright ${year} Fernando Valdés García`}</small>
           </footer>
   
         </BrowserRouter>

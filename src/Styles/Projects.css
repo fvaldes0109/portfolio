@@ -1,0 +1,49 @@
+@import url('./Themes.css');
+
+.projects-container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.projects-container ul {
+    width: 37.5%;
+    margin-right: 2.5%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.projects-container .side {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.projects-container .side img {
+    width: 100%;
+    box-shadow: 7px 7px 10px hsla(var(--shadow));
+    border-radius: 15px;
+}
+
+.projects-container li {
+    display: flex;
+    align-items: center;
+    background-color: hsla(var(--projects));
+    height: 55px;
+    margin: 0 20px 15px 0;
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: scale 0.2s ease-in-out;
+    box-shadow: 5px 5px 5px hsla(var(--shadow));
+}
+
+.projects-container li:hover {
+    scale: 1.03;
+}

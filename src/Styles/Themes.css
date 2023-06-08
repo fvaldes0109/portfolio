@@ -2,6 +2,8 @@
 
     --primary-base: 20;
     --gol-alpha: 0.05;
+    --projects-alpha: 0.5;
+    --shadow-alpha: 0.3;
 
     /* Light Mode */
     --bg-light: 0, 0%, 96%;
@@ -12,6 +14,8 @@
     --gol-alive-light: 0, 0%, 0%, var(--gol-alpha);
     --cv-button-light: var(--primary-base), 100%, 65%;
     --cv-button-hover-light: var(--primary-base), 100%, 75%;
+    --projects-light: 130, 20%, 78%, var(--projects-alpha);
+    --shadow-light: 0, 10%, 66%, var(--shadow-alpha);
 
     /* Dark Mode */
     --bg-dark: 245, 17%, 21%;
@@ -22,6 +26,8 @@
     --gol-alive-dark: 245, 100%, 100%, var(--gol-alpha);
     --cv-button-dark: var(--primary-base), 8%, 50%;
     --cv-button-hover-dark: var(--primary-base), 8%, 70%;
+    --projects-dark: 130, 14%, 33%, var(--projects-alpha);
+    --shadow-dark: 0, 33%, 73%, var(--shadow-alpha);
 }
 
 :root[color-scheme="dark"] {
@@ -34,6 +40,8 @@
     --gol-alive: var(--gol-alive-dark);
     --cv-button: var(--cv-button-dark);
     --cv-button-hover: var(--cv-button-hover-dark);
+    --projects: var(--projects-dark);
+    --shadow: var(--shadow-dark);
     color-scheme: dark;
 }
 
@@ -48,5 +56,7 @@
     --gol-alive: var(--gol-alive-light);
     --cv-button: var(--cv-button-light);
     --cv-button-hover: var(--cv-button-hover-light);
+    --projects: var(--projects-light);
+    --shadow: var(--shadow-light);
     color-scheme: light;
 }

@@ -1,0 +1,34 @@
+{
+    "default": {
+        "description": "",
+        "link": ""
+    },
+    "movie": {
+        "description": "A mobile game made with Unity where you have to guess the movie from a screenshot. It has a lot of levels and a lot of movies to guess.",
+        "link": "https://play.google.com/store/apps/details?id=com.Studios3WE.MovieQuiz"
+    },
+    "interportal": {
+        "description": "A minigame made with Unity consisting of matching a wave to some points the best you can. It makes use of interpolation techniques.",
+        "link": "https://github.com/InterfaSus/Interpolation-DJ/releases/latest"
+    },
+    "moogle": {
+        "description": "A search engine made with C#. It uses an information retrieval algorithm to find the most relevant documents for a given query. It can operators, suggestions, and more.",
+        "link": "https://github.com/fvaldes0109/moogle-2021"
+    },
+    "countries": {
+        "description": "A page made with React that shows the flags and info of every country. You can use a filter by region and search by name. Also, you can click a country to see even more information about it.",
+        "link": "https://fvaldes0109.github.io/rest-countries-api"
+    },
+    "countdown": {
+        "description": "A simple page that displays a countdown timer with a smooth animation",
+        "link": "https://fvaldes0109.github.io/FM-launch-countdown-timer/"
+    },
+    "todo": {
+        "description": "A TODO web app (without back-end), where you can set tasks as pending/completed, delete them and filter them by status.",
+        "link": "https://fvaldes0109.github.io/todo-app/"
+    },
+    "ip": {
+        "description": "A page that tells your IP and approximated location. You can also input an IP or domain and get its info.",
+        "link": "https://fvaldes0109.github.io/FM-ip-address-tracker/"
+    }
+}

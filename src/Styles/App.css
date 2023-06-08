@@ -57,12 +57,12 @@ body {
     transition: background-color 0.2s ease-in-out;
 }
 
-.cv-button:hover {
-    background-color: hsl(var(--cv-button-hover));
+.cv-button h1 {
+    transition: color 0.2s ease-in-out;
 }
 
-.cv-button h1 {
-
+.cv-button:hover {
+    background-color: hsl(var(--cv-button-hover));
 }
 
 @keyframes padding-jiggle {
@@ -146,7 +146,7 @@ footer {
 }
 
 .link-container.above {
-    transform: translate(0, 0);
+    transform: translate(0, 25px);
 }
 
 .link-container:hover {
