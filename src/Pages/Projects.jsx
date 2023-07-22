@@ -13,7 +13,7 @@ export default class Projects extends React.Component {
     super(props);
 
     this.state = {
-			currentProject: "default",
+			currentProject: "movie",
     }
 
 		this.changeProject = this.changeProject.bind(this);
@@ -46,7 +46,9 @@ export default class Projects extends React.Component {
 						<ProjectItem projectTrigger={this.changeProject} data={projects["moogle"]} id="moogle">Moogle Engine</ProjectItem>
 					</ul>
 					<div className="side">
-							<img src={`./images/${this.state.currentProject}.png`} width={700} alt="Project screenshot"/>
+							<a href={projects[this.state.currentProject].link} target="_blank" rel="noopener noreferrer">
+								<img src={`./images/${this.state.currentProject}.png`} width={700} alt="Project screenshot"/>
+							</a>
 						{/* <div className="description">
 							{projects[this.state.currentProject].description}
 						</div> */}

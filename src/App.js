@@ -9,6 +9,7 @@ import AnimatedRoutes from './Components/AnimatedRoutes';
 
 import './Styles/App.css';
 import './Styles/Media.css';
+import logo from './Assets/logo.png';
 
 export default class App extends React.Component {
 
@@ -21,8 +22,8 @@ export default class App extends React.Component {
 
     this.routes = new Map();
     this.routes.set('/', 'Home');
-    this.routes.set('/about', 'About Me');
     this.routes.set('/projects', 'My Projects');
+    this.routes.set('/about', 'About Me');
   }
   
   changeTheme(theme) {
@@ -38,14 +39,19 @@ export default class App extends React.Component {
         
         <BrowserRouter basename={process.env.PUBLIC_URL}>
   
-          <GameOfLife />
-          <ThemeSwitcher changeTheme={this.changeTheme.bind(this)} />
+          {/* <GameOfLife /> */}
 
           <div className='cv-outline'>
             <a className='cv-button' href='/portfolio/fernando-valdes-CV.pdf' target="_blank" rel="noopener noreferrer">
               <h1>Check my CV</h1>
             </a>
           </div>
+
+          <div className='logo-container'>
+            <img alt='logo' src={logo} className='logo' width={100}/>
+          </div>
+
+          <ThemeSwitcher changeTheme={this.changeTheme.bind(this)} />
 
           <main>
             <AnimatedRoutes />
