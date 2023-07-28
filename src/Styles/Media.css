@@ -81,4 +81,24 @@
         font-size: 15px;
         width: 50%;
     }
+
+    .cv-outline {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cv-button {
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 75px;
+    }
+}
+
+@media (max-height: 800px) {
+
+    .contact-component {
+        margin-bottom: 30px;
+    }
 }

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion/dist/framer-motion';
 import ProjectItem from "../Components/ProjectItem";
 
 import '../Styles/Projects.css'
+import '../Styles/Media-Projects.css'
 
 import projects from '../Assets/projects/projects.json';
 import TextBalloon from "../Components/TextBalloon";

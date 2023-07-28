@@ -62,9 +62,9 @@
     border-radius: 15px;
     width: 350px;
     box-shadow: 0 2px 5px hsla(var(--shadow));
-  }
+}
   
-  .triangle {
+.triangle {
     position: absolute;
     bottom: -15px;
     left: calc(50% - 15px);
@@ -74,4 +74,4 @@
     border-right: 15px solid transparent;
     border-top: 15px solid hsl(var(--description));
     filter: drop-shadow(0px 2px 2px hsla(var(--shadow)));
-  }
+}

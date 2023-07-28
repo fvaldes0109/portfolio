@@ -1,0 +1,28 @@
+@media (max-width: 1700px) {
+
+    .projects-container {
+
+        width: 1050px;
+    }
+
+    .projects-container ul {
+        margin: 0;
+        width: 30%;
+    }
+
+    .projects-container .side {
+        width: 70%;
+    }
+
+    .side a {
+        height: 90%;
+    }
+
+    .side img {
+        height: 100%;
+    }
+
+    .text-balloon {
+        left: 75%;
+    }
+}
