@@ -16,6 +16,7 @@
     --cv-button-hover-light: var(--primary-base), 100%, 75%;
     --projects-light: 130, 20%, 78%, var(--projects-alpha);
     --shadow-light: 0, 10%, 66%, var(--shadow-alpha);
+    --description-light: 215, 95%, 88%;
 
     /* Dark Mode */
     --bg-dark: 245, 17%, 21%;
@@ -28,6 +29,7 @@
     --cv-button-hover-dark: var(--primary-base), 8%, 70%;
     --projects-dark: 130, 14%, 33%, var(--projects-alpha);
     --shadow-dark: 0, 33%, 73%, var(--shadow-alpha);
+    --description-dark: 215, 27%, 40%;
 }
 
 :root[color-scheme="dark"] {
@@ -42,6 +44,7 @@
     --cv-button-hover: var(--cv-button-hover-dark);
     --projects: var(--projects-dark);
     --shadow: var(--shadow-dark);
+    --description: var(--description-dark);
     color-scheme: dark;
 }
 
@@ -58,5 +61,6 @@
     --cv-button-hover: var(--cv-button-hover-light);
     --projects: var(--projects-light);
     --shadow: var(--shadow-light);
+    --description: var(--description-light);
     color-scheme: light;
 }

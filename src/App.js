@@ -39,7 +39,7 @@ export default class App extends React.Component {
         
         <BrowserRouter basename={process.env.PUBLIC_URL}>
   
-          {/* <GameOfLife /> */}
+          <GameOfLife />
 
           <div className='cv-outline'>
             <a className='cv-button' href='/portfolio/fernando-valdes-CV.pdf' target="_blank" rel="noopener noreferrer">

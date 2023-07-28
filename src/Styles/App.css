@@ -16,7 +16,7 @@ body {
     margin: 0;
     background-color: hsl(var(--bg));
     color: hsl(var(--text));
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    /* transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; */
     font-family: 'Manrope', sans-serif;
 }
 
@@ -55,12 +55,12 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
-    transition: background-color 0.2s ease-in-out;
+    /* transition: background-color 0.2s ease-in-out; */
     font-size: 15px;
 }
 
 .cv-button h1 {
-    transition: color 0.2s ease-in-out;
+    /* transition: color 0.2s ease-in-out; */
 }
 
 .cv-button:hover {
