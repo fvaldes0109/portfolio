@@ -1,7 +1,5 @@
 import React from "react";
 
-import getColor from '../Helpers/getColor.js';
-
 export default class Contact extends React.Component {
 
 	constructor(props) {
@@ -9,7 +7,7 @@ export default class Contact extends React.Component {
 		
 		this.state = {
 			linksVisible: false,
-			iconsColor: getColor(`--text-${this.props.theme}`),
+			iconsColor: this.getColor(`--text-${this.props.theme}`),
 		}
 
 		this.iconSize = 60;
@@ -18,7 +16,7 @@ export default class Contact extends React.Component {
 	componentDidUpdate(prevProps) {
 		
 		if (prevProps.theme !== this.props.theme) {
-			this.setState({ iconsColor: getColor(`--text-${this.props.theme}`) });
+			this.setState({ iconsColor: this.getColor(`--text-${this.props.theme}`) });
 		}
 	}
 
@@ -30,6 +28,11 @@ export default class Contact extends React.Component {
 			;
 		});
 		this.setState({ linksVisible: !this.state.linksVisible });
+	}
+
+	getColor(value) {
+
+		return value === '--text-light' ? '000000' : 'ffffff';
 	}
 
   render() {
